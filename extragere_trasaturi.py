@@ -11,8 +11,8 @@ dataset_test1 = list(dataset_test1)
 dataset_test2 = ImageDataset(root_dir='./patches_img300x300_dupa_12x12', transform=transforms.ToTensor())
 dataset_test2 = list(dataset_test2)
 
-test_loader1 = DataLoader(dataset_test1, batch_size=1, shuffle=True, drop_last=True)
-test_loader2 = DataLoader(dataset_test2, batch_size=1, shuffle=True, drop_last=True)
+test_loader1 = DataLoader(dataset_test1, batch_size=1, shuffle=False, drop_last=True)
+test_loader2 = DataLoader(dataset_test2, batch_size=1, shuffle=False, drop_last=True)
 
 model = CA.Autoencoder()
 model.load_state_dict(torch.load("model_compresie"))
